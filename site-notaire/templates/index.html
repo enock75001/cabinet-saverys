@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-primary text-white">
+    <div class="container">
+        <div class="row align-items-center min-vh-100">
+            <div class="col-lg-6">
+                <div class="badge bg-gold text-navy mb-3 px-3 py-2 rounded-pill fw-semibold">
+                    <i class="fas fa-star me-2"></i>15+ années d'expérience
+                </div>
+                <h1 class="display-4 fw-bold mb-4">Maître Marc Saverys</h1>
+                <h2 class="h3 text-gold mb-4">
+                    <i class="fas fa-balance-scale me-2"></i>Notaire à Jeu-les-Bois
+                </h2>
+                <p class="lead mb-4">
+                    Expertise juridique et accompagnement personnalisé pour tous vos projets immobiliers, 
+                    familiaux et patrimoniaux depuis plus de 15 ans. <span class="text-gold fw-semibold">Votre partenaire juridique pour la vie.</span>
+                </p>
+                <div class="d-flex flex-wrap gap-3 mb-4">
+                    <a href="{{ url_for('contact') }}" class="btn btn-gold btn-lg shadow-lg">
+                        <i class="fas fa-calendar-check me-2"></i>Prendre rendez-vous
+                    </a>
+                    <a href="{{ url_for('services') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-briefcase me-2"></i>Nos services
+                    </a>
+                </div>
+                <div class="d-flex align-items-center text-light opacity-75">
+                    <i class="fas fa-shield-alt me-2 text-gold"></i>
+                    <small>Sécurité juridique garantie • Actes authentiques</small>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-image">
+                    <img src="{{ url_for('static', filename='images/notary-office.svg') }}" 
+                         alt="Étude notariale" class="img-fluid" style="max-height: 400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center mb-5">
+                <h2 class="display-5 fw-bold mb-4">Nos domaines d'expertise</h2>
+                <p class="lead text-muted">
+                    Une approche professionnelle et humaine pour vous accompagner dans tous vos projets juridiques
+                </p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mb-3">
+                        <img src="{{ url_for('static', filename='images/real-estate.svg') }}" 
+                             alt="Immobilier" style="height: 60px;">
+                    </div>
+                    <h4>Immobilier</h4>
+                    <p class="text-muted">Ventes, acquisitions, prêts immobiliers et copropriété</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mb-3">
+                        <img src="{{ url_for('static', filename='images/family-protection.svg') }}" 
+                             alt="Droit de la famille" style="height: 60px;">
+                    </div>
+                    <h4>Droit de la famille</h4>
+                    <p class="text-muted">Mariages, PACS, divorces et régimes matrimoniaux</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mb-3">
+                        <img src="{{ url_for('static', filename='images/legal-documents.svg') }}" 
+                             alt="Successions" style="height: 60px;">
+                    </div>
+                    <h4>Successions</h4>
+                    <p class="text-muted">Testaments, donations et règlements successoraux</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="service-card text-center h-100">
+                    <div class="service-icon mb-3">
+                        <img src="{{ url_for('static', filename='images/business-law.svg') }}" 
+                             alt="Droit des affaires" style="height: 60px;">
+                    </div>
+                    <h4>Droit des affaires</h4>
+                    <p class="text-muted">Créations, cessions d'entreprises et fonds de commerce</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="display-6 fw-bold mb-4">Pourquoi choisir notre étude ?</h2>
+                <div class="row g-4">
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-medal fa-2x text-gold"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Expertise reconnue</h5>
+                                <p class="text-muted">Plus de 15 ans d'expérience dans tous les domaines du droit notarial</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-heart fa-2x text-gold"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Accompagnement personnalisé</h5>
+                                <p class="text-muted">Une écoute attentive et des conseils adaptés à votre situation</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="d-flex">
+                            <div class="flex-shrink-0">
+                                <i class="fas fa-clock fa-2x text-gold"></i>
+                            </div>
+                            <div class="flex-grow-1 ms-3">
+                                <h5>Disponibilité</h5>
+                                <p class="text-muted">Écoute attentive et suivi personnalisé de vos dossiers</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="office-image">
+                    <img src="{{ url_for('static', filename='images/family-protection.svg') }}" 
+                         alt="Protection familiale" class="img-fluid" style="max-height: 300px;">
+                    <p class="text-muted mt-3">Notre étude à Jeu-les-Bois</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="py-5 bg-primary text-white">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-6 fw-bold mb-4">Besoin d'un conseil juridique ?</h2>
+                <p class="lead mb-4">
+                    Contactez-nous pour un premier entretien et bénéficiez de notre expertise
+                </p>
+                <div class="d-flex flex-wrap justify-content-center gap-3">
+                    <a href="tel:+33774435693" class="btn btn-gold btn-lg">
+                        <i class="fas fa-phone me-2"></i>+33 774 43 5693
+                    </a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Nous écrire
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
